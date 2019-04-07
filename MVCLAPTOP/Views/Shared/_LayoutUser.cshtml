@@ -1,0 +1,227 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Shop Homepage - Start Bootstrap Template</title>
+    <!-- Bootstrap Core CSS -->
+  
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link href="~/Content/ew.css" rel="stylesheet" />
+    <link href="~/Content/shop-homepage.css" rel="stylesheet" />
+    <!--test-->
+    </head>
+<body>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.2"></script>
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <marquee>
+                    <img src="~/Images/200x55x-1.png" />
+                </marquee>
+                   
+</div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        @Html.ActionLink("TRANG CHỦ", "Index", "Laptopstore")
+                    </li>
+                
+                    <li>
+                        @Html.ActionLink("ĐĂNG KÝ", "Dangky", "Nguoidung")
+                    </li>
+                   <li>
+                        @Html.ActionLink("ĐĂNG NHẬP", "Dangnhap", "Nguoidung")
+                    </li>
+                    
+                   <li>
+                       @Html.ActionLink("Giới thiệu","Lienhe","Lienhe")
+
+                   </li>
+                 <div style="float:left">
+                     @Html.Action("GiohangPartial","GioHang")
+                 </div>
+                  
+                    <iframe scrolling="no" frameborder="no" clocktype="html5" style="overflow:hidden;border:0;margin:0;padding:0;width:180px;height:60px;" src="https://www.clocklink.com/html5embed.php?clock=043&timezone=VietNam_Hanoi&color=blue&size=180&Title=&Message=&Target=&From=2019,1,1,0,0,0&Color=blue"></iframe>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+
+                @Html.Action("Chude", "Laptopstore")
+                @Html.Action("Hang", "Laptopstore")
+                <div class="fb-page" data-href="https://www.facebook.com/Laptop-New-327540194614410/" data-tabs="timeline" data-width="300" data-height="300" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/Laptop-New-327540194614410/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Laptop-New-327540194614410/">Laptop New</a></blockquote></div>
+            </div>
+            <div class="col-md-9">
+                <div class="row carousel-holder">
+                    <div class="col-md-12">
+                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <img src="~/Images/vvv.jpg" />
+                                  
+
+                                </div>
+                                <div class="item">
+                                    <img src="~/Images/aaa.jpg" />
+                                    
+                                </div>
+                                <div class="item">
+                                    <img src="~/Images/ggg.png" />
+                                 
+                                </div>
+
+
+                            </div>
+                            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                            </a>
+                            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <marquee>
+                    <h4 Style="Text-align:Center; color:slateblue"> Chào mừng bạn đến với LaptopNEW, Chúc bạn một ngày vui vẻ!!!</h4>
+                </marquee>
+
+                <div>
+                    @RenderBody()
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+
+    <div class="container">
+        <hr>
+        <!-- Footer -->
+        <!--================ Start footer Area  =================-->
+        <footer class="footer">
+            <div class="footer-area">
+                <div class="container">
+                    <div class="row section_gap">
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="single-footer-widget tp_widgets">
+                                <h4 class="footer_title large_title">Công nghệ và Cuộc sống</h4>
+                                <p>
+                                    So seed seed green that winged cattle in. Gathering thing made fly you're no
+                                    divided deep moved us lan Gathering thing us land years living.
+                                </p>
+                                <p>
+                                    So seed seed green that winged cattle in. Gathering thing made fly you're no divided deep moved
+                                </p>
+                            </div>
+                        </div>
+                        <div class="offset-lg-1 col-lg-2 col-md-6 col-sm-6">
+                            <div class="single-footer-widget tp_widgets">
+                                <h4 class="footer_title">Liên kết nhanh</h4>
+                                <ul class="list">
+                                    <a class="navbar-brand" href=@Url.Action("Index","Laptopstore")>Trang chủ</a>
+                                  
+                                    <a class="navbar-brand" href=@Url.Action("Lienhe","Lienhe")>Giới thiệu</a>
+                                    <a class="navbar-brand" href=@Url.Action("Lienhe","Lienhe")>Liên hệ</a>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-6 col-sm-6">
+                            <div class="single-footer-widget instafeed">
+                                <h4 class="footer_title">Gallery</h4>
+                                <ul class="list instafeed d-flex flex-wrap">
+                                    <li><img src="img/gallery/r1.jpg" alt=""></li>
+                                    <li><img src="img/gallery/r2.jpg" alt=""></li>
+                                    <li><img src="img/gallery/r3.jpg" alt=""></li>
+                                    <li><img src="img/gallery/r5.jpg" alt=""></li>
+                                    <li><img src="img/gallery/r7.jpg" alt=""></li>
+                                    <li><img src="img/gallery/r8.jpg" alt=""></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="offset-lg-1 col-lg-3 col-md-6 col-sm-6">
+                            <div class="single-footer-widget tp_widgets">
+                                <h4 class="footer_title">Liên hệ với chúng tôi</h4>
+                                <div class="ml-40">
+                                    <p class="sm-head">
+                                        <span class="fa fa-location-arrow"></span>
+                                        Head Office
+                                    </p>
+                                    <p>123, Đường Cộng Trừ, HCM City</p>
+
+                                    <p class="sm-head">
+                                        <span class="fa fa-phone"></span>
+                                        Số điện thoại
+                                    </p>
+                                    <p>
+                                        +123 456 7890 <br>
+                                        +123 456 7890
+                                    </p>
+
+                                    <p class="sm-head">
+                                        <span class="fa fa-envelope"></span>
+                                        Email
+                                    </p>
+                                    <p>
+                                        laptopnewhds@gmail.com <br>
+                                        www.ssssss.com
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="row d-flex">
+                        <p class="col-lg-12 footer-text text-center">
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            Copyright &copy;
+                            <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Laptopnew</a>
+                    </div>
+
+
+                    <!-- /.container -->
+                    <!-- Load Facebook SDK for JavaScript -->
+                    <!-- jQuery -->
+                    <script src="js/jquery.js"></script>
+                    <script src="js/bootstrap.min.js"></script>
+                    <script src="~/Scripts/jquery.js"></script>
+                    <!-- Bootstrap Core JavaScript -->
+                    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+                    <script src="~/Scripts/bootstrap.min.js"></script>
+
+                    <script src="~/Scripts/platform.js"></script>
+</body>
+</html>

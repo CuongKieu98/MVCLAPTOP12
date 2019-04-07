@@ -1,0 +1,12 @@
+﻿@model IEnumerable<MVCLAPTOP.Models.HANG>
+<p class="lead"> THƯƠNG HIỆU </p>
+<div class="list-group">
+    
+    @foreach (var item in Model)
+    {
+        <a href="@Url.Action("Sptheohang", "Laptopstore", new { id = item.MaHang })" class="list-group-item">
+            @item.TenHang
+            
+        </a>
+    }
+</div>

@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<h2>THÔNG TIN LAPTOP</h2>
+<h3>Tên Laptop: @Model.Tenlaptop</h3>
+<style type="text/css">
+    #Datmua a{
+        clear: both; background-color:green;
+        color:white; width: 120px; height: 35px;
+        display:block; float:right; text-align:center;
+        padding-top: 10px; text-decoration:none; font-weight:bold;
+    }
+    #Datmua a:hover{
+        background-color: gray;
+        color:green;
+    }
+
+</style>
+@{ 
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.2"></script>
+<h3>Thông tin sản phẩm</h3>
+<div>
+    <div style="width:40% ;float:left; border-left:dotted 1px; border-color:azure">
+        <img src="~/Images/@Model.Anhbia" width="100%"/>
+            
+    </div>
+    <div style="width:60% ; float:left; padding:10%">
+        <h4 style="font-weight:bold; color:red">Tên laptop: @Model.Tenlaptop</h4>
+        <p style="text-align:justify"><span style="font-weight:bold">Chi tiết</span>@Model.Mota</p>
+        <p style="font-weight:bold">Giá<span style="color:red;font-size:16pt">@Model.Giaban vnd</span></p>
+    </div>
+</div>
+<div>
+    <div id="Datmua">
+        <a href="@Url.Action("ThemGiohang","GioHang", new { @iMalaptop= @Model.Malaptop,@strURL= Request.Url.ToString()})">
+            Thêm Giỏ Hàng
+        </a>
+    </div>
+</div>
+<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+<div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-numposts="5"></div>
+
+

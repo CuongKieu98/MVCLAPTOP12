@@ -1,0 +1,36 @@
+﻿@model IEnumerable<MVCLAPTOP.Models.LAPTOP>
+    @{ 
+        ViewBag.Title = "Index";
+        Layout = "~/Views/Shared/_LayoutUser.cshtml";
+    }
+<h3 style="text-align: center; color:red">CHỦ DỀ</h3>
+<div class="row">
+    @foreach (var laptop in Model)
+    {
+        <div class="col-sm-4 col-lg-4 col-md-4">
+            <div class="thumbnail">
+                <a href="@Url.Action("Details", "Laptopstore", new {id = laptop.Malaptop})">
+                    <img alt="@laptop.Tenlaptop" src="~/Images/@laptop.Anhbia" />
+                    <div>
+                        <br />
+                        <h4 style="text-align:center">
+                            @laptop.Tenlaptop
+                        </h4>
+                        <p></p>
+
+                    </div>
+                    <div class="ratings">
+                        <p class="pull-right">15 reviews</p>
+                        <p>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star">
+                            </span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                        </p>
+                    </div>
+            </div>
+        </div>
+    }
+</div>

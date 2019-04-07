@@ -1,0 +1,43 @@
+﻿@model IEnumerable<MVCLAPTOP.Models.HANG>
+
+@{
+    ViewBag.Title = "hangsanxuat";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>HÃNG SẢN XUẤT</h2>
+
+
+    <p>
+        @Html.ActionLink("Thêm mới", "Themmoihang")
+    </p>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TenHang)
+        </th>
+   <th>
+       @Html.DisplayNameFor(model=> model.MaHang)
+   </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenHang)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem=> item.MaHang)
+
+        </td>
+
+        <td>
+            <button> @Html.ActionLink("Sửa", "Suahang", new { id = item.MaHang })</button> |
+            <button> @Html.ActionLink("Xóa", "Xoahang", new { id = item.MaHang })</button>
+        </td>
+    </tr>
+}
+
+</table>
